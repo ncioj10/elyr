@@ -47,7 +47,7 @@ def get_stats_event(event_id, info):
 
 def to_csv(file_name, data):
     keys = data[0].keys()
-    with open("/results/"+file_name+'.csv', 'w') as output_file:
+    with open("./results/"+file_name+'.csv', 'w') as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
         dict_writer.writeheader()
         dict_writer.writerows(data)
